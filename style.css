@@ -1,0 +1,203 @@
+html, body {
+    margin: 0px;
+    color: #aec9f5; /* Light text color for contrast */
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    font-family: 'Courier New', monospace;
+    background-color: #f9f9f9;
+    background-image: url('cat_background2.jpg'); /* Path to your image */
+    background-size: 600px;
+    background-repeat: repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+
+.imgbox {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+    height: 50vh;
+    width: auto;
+    margin-top: 15px;
+}
+
+.imgbox img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+
+
+.blog-header {
+    /*background-image: url('images/goated2.JPG'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image fills the header */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+    height: 150px; /* Makes the header fill the entire viewport height */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: left; /* Center content horizontally */
+    text-align: left; /* Center-align text */
+    padding: 20px;
+    color: #fff; /* Light text color for contrast */
+}
+
+.blog-header h2 {
+    margin-bottom: 20px; /* Add space below the title */
+    font-size: 2em; /* Adjust the title font size */
+}
+
+.blog-header nav {
+    display: flex;
+    gap: 15px; /* Space between links */
+}
+
+.blog-header nav a {
+    text-decoration: none; /* Remove underline from links */
+    color: #fff; /* White link text */
+    font-size: 1.2em; /* Adjust link font size */
+    font-weight: bold;
+    padding: 2px 5px; /* Add padding around links */
+    /* background-color: rgba(0, 0, 0, 0.5); Semi-transparent background for better readability */
+    border-radius: 0px; /* Rounded corners for links */
+}
+
+.blog-header nav a:hover {
+    color: rgba(255, 255, 255); /* Light hover effect */
+}
+
+canvas {
+    display: block;
+    background-color: rgb(241, 235, 227);
+}
+
+p {
+    white-space: pre-wrap;
+    color: #000000;
+  }
+
+.blog-entry {
+    background-color: #f0f0f0; /* Background color for entries */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 1px; /* Rounded corners for the entry box */
+    padding: 15px; /* Space around content */
+    margin-bottom: 20px; /* Space between entries */
+    box-shadow: 0 2px 5px rgba(0, 0, 0); /* Shadow for depth */
+    overflow: auto; /* Ensure content flows properly if expanded */
+}
+
+
+
+/* Image container default behavior */
+.imgbox {
+    display: flex; /* Flexbox for layout */
+    justify-content: flex-start; /* Align images side by side */
+    gap: 5px; /* Gap between images */
+    height: 50vh; /* Default height for images */
+    flex-wrap: nowrap; /* Prevent wrapping by default */
+}
+
+/* Images within container */
+.imgbox img {
+    height: 100%; /* Adjust to container height */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Prevent distortion */
+}
+
+/* Media query: Adjust layout when images stack */
+@media (max-aspect-ratio: 1/1) {
+    .imgbox {
+        flex-direction: column; /* Stack images vertically */
+        align-items: center; /* Center images horizontally */
+        height: auto; /* Let height adjust to image size */
+    }
+
+    .imgbox img {
+        height: auto; /* Reset height */
+        width: 80%; /* Adjust width for vertical layout */
+    }
+
+    /* Ensure blog entry expands to accommodate stacked images */
+    .blog-entry {
+        padding-bottom: 20px; /* Add extra padding if needed */
+        margin-bottom: 40px; /* Increase margin for better spacing */
+    }
+}
+
+
+.sidebar {
+    /*background-color: pink;*/
+    width: 200px;
+    padding: 20px;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+
+  .sidebar nav p {
+    margin: 15px 0;
+  }
+
+  .sidebar nav a img {
+    display: block;
+    border: none;
+    outline: none;
+  }
+
+  .sidebar nav a {
+    outline: none;
+    border: none;
+  }
+
+  .main-content {
+    background-image: url('paper.png');
+    background-repeat: no-repeat;
+    margin-left: 40px;
+    width: 100%;   /* Covers 80% of the parent container (often the full body width minus the sidebar) */
+    height: 200vh; /* Full viewport height */
+  }
+
+  .layout-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: calc(100vh - 150px); /* Adjust based on header height */
+}
+
+a img {
+    border: 0;
+  }
+
+a {
+outline: none;
+text-decoration: none;
+}
+a:focus {
+outline: none;
+}
+a:visited,
+a:active {
+outline: none;
+border: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+  border: none;
+}
+  
