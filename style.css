@@ -1,0 +1,407 @@
+html, body {
+    margin: 0px;
+    color: #aec9f5; /* Light text color for contrast */
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    font-family: 'Courier New', monospace;
+    background-color: #f9f9f9;
+    background-image: url('graphBackground.jpg'); /* Path to your image */
+    background-size: 90%;
+    background-repeat: repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+
+.imgbox {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+    height: 50vh;
+    width: auto;
+    margin-top: 15px;
+}
+
+
+.imgbox img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+
+
+.blog-header {
+    padding: 30px;
+    position: relative;
+}
+  
+  .header-corner-img {
+    position: absolute;
+    bottom: -9vh;
+    right: 0;
+    width: 15vw;   /* or whatever small size you want */
+    height: auto;
+    margin: 0px;  /* optional padding from edges */
+    z-index: 2;    /* makes sure it's above background */
+  }
+
+
+canvas {
+    display: block;
+    background-color: rgb(241, 235, 227);
+}
+
+p {
+    white-space: pre-wrap;
+    color: #000000;
+  }
+
+.blog-entry {
+    background-color: #f0f0f0; /* Background color for entries */
+    /* background-image: url("images/blog-entry-bg1.jpg"); */
+    background-size: 100%;
+    border: 0px ; /* Subtle border */
+    border-radius: 1px; /* Rounded corners for the entry box */
+    padding: 15px; /* Space around content */
+    margin-bottom: 20px; /* Space between entries */
+    box-shadow: 0 2px 5px rgba(0, 0, 0); /* Shadow for depth */
+    overflow: auto; /* Ensure content flows properly if expanded */
+}
+
+
+
+
+/* Image container default behavior */
+.imgbox {
+    display: flex; /* Flexbox for layout */
+    justify-content: flex-start; /* Align images side by side */
+    gap: 5px; /* Gap between images */
+    height: 50vh; /* Default height for images */
+    flex-wrap: nowrap; /* Prevent wrapping by default */
+}
+
+/* Images within container */
+.imgbox img {
+    height: 100%; /* Adjust to container height */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Prevent distortion */
+}
+
+/* Media query: Adjust layout when images stack */
+@media (max-aspect-ratio: 1/1) {
+    .imgbox {
+        flex-direction: column; /* Stack images vertically */
+        align-items: center; /* Center images horizontally */
+        height: auto; /* Let height adjust to image size */
+    }
+
+    .imgbox img {
+        height: auto; /* Reset height */
+        width: 80%; /* Adjust width for vertical layout */
+    }
+
+    /* Ensure blog entry expands to accommodate stacked images */
+    .blog-entry {
+        padding-bottom: 20px; /* Add extra padding if needed */
+        margin-bottom: 40px; /* Increase margin for better spacing */
+    }
+}
+.main-content {
+    flex-grow: 1;
+    position: relative;
+    padding: 20px;
+  
+    
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position-y: -2vh;
+    margin-left: 20px;
+    width: 75%;   /* Covers 80% of the parent container (often the full body width minus the sidebar) */
+    height: 200vh; /* Full viewport height */
+  }
+
+  .main-content-poem {
+    flex-grow: 1;
+    position: relative;
+    padding: 20px;
+  
+    
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position-y: -8vh;
+    margin-left: 20px;
+    width: 200%;
+    height: 200vh; /* Full viewport height */
+  }
+
+  .layout-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: stretch;
+    /*height: auto; /* Adjust based on header height */
+}
+
+
+.sidebar {
+    /* background-color: pink; */
+    display: flex;
+    position: relative;
+    background-image: url('guestCheck.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 0;
+    width: 18vw;
+    height: 100vh;
+    padding: 20px;
+    align-self: stretch;
+    flex-direction: column; /* Stack buttons vertically */
+    justify-content: flex-start; /* or space-between/center/bottom */
+    align-items: center; /* horizontally center the buttons */
+      
+    /* box-sizing: border-box; */
+    min-height: 100%;
+  }
+  
+
+
+  .sidebar nav p {
+    padding-top: 15%;
+    margin: 0px;
+  }
+
+  .sidebar nav a img {
+    margin: 22px auto;
+    display: block;
+    border: none;
+    outline: none;
+  }
+
+  .sidebar nav a {
+    outline: none;
+    border: none;
+    display: block;
+    width: 90%;          /* ← consistent relative to sidebar width */
+    margin: 10px auto;   /* ← centers the button horizontally */
+    text-align: center;
+  }
+
+  .sidebar-deco {
+    position: relative;
+    width: 20vw;
+    top: 90vh;
+  }
+
+
+ 
+  .btn {
+    position: absolute;
+    display: block;
+    height: 3vw * .5;
+    text-align: center;
+  }
+
+  .btn img {
+    height: 3vw;
+  }
+  
+  .btn-home {
+    top: 7vw;
+    left: 0vw;
+  }
+  
+  .btn-blog {
+    top: 11vw;  /* instead of 190px */
+    left: 3vw;
+  }
+  
+  .btn-photos {
+    top: 16vw;
+    left: 1vw;
+  }
+  
+  .btn-poems {
+    top: 20vw;
+    left: 2vw;
+  }
+  
+  .btn-otherStuff {
+    top: 25vw;
+    left: 1vw;
+  }
+
+
+a img {
+    border: 0;
+  }
+
+a {
+outline: none;
+text-decoration: none;
+}
+a:focus {
+outline: none;
+}
+a:visited,
+a:active {
+outline: none;
+border: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+  border: none;
+}
+  
+
+
+.rotate-on-hover {
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .rotate-on-hover:hover {
+    transform: rotate(10deg);
+  }
+
+  .rotate-on-hover-teddy {
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .rotate-on-hover-teddy:hover {
+    transform: rotate(2deg);
+  }
+
+
+
+
+  .rotate-on-hover1 {
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .rotate-on-hover1:hover {
+    transform: scale(1.1);
+  }
+
+  .rotate-on-hover2 {
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .rotate-on-hover2:hover {
+    transform: scale(1.1);
+  }
+
+.decor {
+    position:relative;
+    top: -1%;
+    left: 65%;
+    width: 30%;
+}
+
+
+
+.photo-gallery {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 30px;
+  }
+
+  .photo-grid img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .photo-navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+  }
+
+  .photo-navigation button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: 'Courier New', monospace;
+    background-color: #ddd;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .photo-navigation button:hover {
+    background-color: #ccc;
+  }
+
+
+.home-body {
+    font-size: 1.2vw;
+    
+    position: relative;
+    transform: rotate(-0.8deg);
+    left: -3.7vw;
+    top: 3.0vh;
+    width: 52vw;
+    margin: auto;
+
+    line-height: 3.46vh;
+    
+}
+ 
+.home-decor {
+    position:relative;
+    width: 23vw;
+    top: 0vh;
+    left: 35vw;
+}
+
+.home-decor-me {
+    position:relative;
+    width: 17vw;
+    top: 0vh;
+    left: -20vw;
+    transform: rotate(-2deg);
+}
+.home-decor-me1 {
+    position:relative;
+    width: 40vw;
+    top: -25vh;
+    left: 12vw;
+    transform: rotate(-2deg);
+}
+
+.home-decor-teddy {
+    position:relative;
+    width: 25vw;
+    top: -110vh;
+    left: 18vw;
+    transform: rotate(-20deg);
+}

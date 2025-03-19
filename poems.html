@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>poems</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    .main-content{
+      background-image: url('paper.png');
+    }
+  </style>
+</head>
+
+<body>
+
+    <header class="blog-header">
+        <img src="text.gif" alt="title" width="400">
+        <img src="tamagotchiME.png" class="header-corner-img rotate-on-hover" alt="corner sticker">
+      </header>
+    
+      <div class="layout-container">
+        <div class="sidebar">
+          <nav>
+            <a href="index.html" class="btn btn-home">
+    
+              <img src="blog_icons/homeButton.png" alt="home" class="rotate-on-hover1">
+            </a>
+            <a href="blog.html" class="btn btn-blog">
+              <img src="blog_icons/blogButton.png"alt="blog" class="rotate-on-hover2">
+            </a>
+            <a href="pics.html" class="btn btn-photos">
+              <img src="blog_icons/photosButton.png" alt="photos" class="rotate-on-hover1">
+            </a>
+    
+            <a href="blog.html" class="btn btn-poems">
+              <img src="blog_icons/poemsButton.png"alt="poems" class="rotate-on-hover2">
+            </a>
+            <a href="otherStuff.html" class="btn btn-otherStuff">
+              <img src="blog_icons/otherStuffButton.png" alt="otherStuff" class="rotate-on-hover1">
+            </a>
+    
+          </nav>
+        </div>
+        <div class="main-content">
+            <div id="lockscreen" style="
+                            position: absolute;
+                            top: 3vh;
+                            left: 10vw;
+                            width: 60vw;
+                            height: auto;
+                            font-size: 1.5vw;
+                            
+                            z-index: 999;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            padding: 20px;
+                            transform: rotate(-1deg);
+                            ">
+              <p style="font-size:1.3vw">whats the magic word...??</p>
+              <br>
+              <input type="password" id="passcodeInput" placeholder="enter passcode..." style="padding: 10px; font-size: 1rem;">
+              <button onclick="checkPasscode()" style="padding: 0.5vw 1vw; margin-top: 10px; font-size: 1.0vw; font-family: 'Courier New', monospace;">enter</button>
+              <p id="errorMsg" style="color: red; display: none; font-size: 1.2vw; font-family: 'Courier New', monospace;">incorrect passcode! try again..</p>
+              <img src="images/gifs/catgif9000.gif">
+            </div>
+          </div>
+        </div>
+      
+        <script>
+          const i = "iloveyou";
+      
+          function checkPasscode() {
+            const input = document.getElementById("passcodeInput").value;
+            if (input === i) {
+              window.location.href = "555.html";
+            } else {
+              document.getElementById("errorMsg").style.display = "block";
+            }
+          }
+        </script>
+      </body>
+      </html>
+      

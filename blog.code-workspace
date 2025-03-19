@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"name": "blog",
+			"path": "."
+		},
+		{
+			"name": "buttons",
+			"path": "../guestCheck/buttons"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501,
+		"liveServer.settings.multiRootWorkspaceName": "blog"
+	}
+}
