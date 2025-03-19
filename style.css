@@ -1,13 +1,13 @@
 html, body {
     margin: 0px;
     color: #aec9f5; /* Light text color for contrast */
-    padding: 10px;
+    padding: 5px;
     width: 100%;
     height: 100%;
     font-family: 'Courier New', monospace;
     background-color: #f9f9f9;
-    background-image: url('cat_background2.jpg'); /* Path to your image */
-    background-size: 600px;
+    background-image: url('graphBackground.jpg'); /* Path to your image */
+    background-size: 90%;
     background-repeat: repeat; /* Prevent the image from repeating */
     background-position: center; /* Center the image */
 }
@@ -34,6 +34,7 @@ h3 {
     margin-top: 15px;
 }
 
+
 .imgbox img {
     height: 100%;
     width: auto;
@@ -43,43 +44,20 @@ h3 {
 
 
 .blog-header {
-    /*background-image: url('images/goated2.JPG'); /* Replace with your image path */
-    background-size: cover; /* Ensures the image fills the header */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-position: center; /* Centers the image */
-    height: 150px; /* Makes the header fill the entire viewport height */
-    display: flex; /* Flexbox for layout */
-    flex-direction: column; /* Stack content vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: left; /* Center content horizontally */
-    text-align: left; /* Center-align text */
-    padding: 20px;
-    color: #fff; /* Light text color for contrast */
+    padding: 30px;
+    position: relative;
 }
+  
+  .header-corner-img {
+    position: absolute;
+    bottom: -9vh;
+    right: 0;
+    width: 15vw;   /* or whatever small size you want */
+    height: auto;
+    margin: 0px;  /* optional padding from edges */
+    z-index: 2;    /* makes sure it's above background */
+  }
 
-.blog-header h2 {
-    margin-bottom: 20px; /* Add space below the title */
-    font-size: 2em; /* Adjust the title font size */
-}
-
-.blog-header nav {
-    display: flex;
-    gap: 15px; /* Space between links */
-}
-
-.blog-header nav a {
-    text-decoration: none; /* Remove underline from links */
-    color: #fff; /* White link text */
-    font-size: 1.2em; /* Adjust link font size */
-    font-weight: bold;
-    padding: 2px 5px; /* Add padding around links */
-    /* background-color: rgba(0, 0, 0, 0.5); Semi-transparent background for better readability */
-    border-radius: 0px; /* Rounded corners for links */
-}
-
-.blog-header nav a:hover {
-    color: rgba(255, 255, 255); /* Light hover effect */
-}
 
 canvas {
     display: block;
@@ -93,13 +71,16 @@ p {
 
 .blog-entry {
     background-color: #f0f0f0; /* Background color for entries */
-    border: 1px solid #ddd; /* Subtle border */
+    /* background-image: url("images/blog-entry-bg1.jpg"); */
+    background-size: 100%;
+    border: 0px ; /* Subtle border */
     border-radius: 1px; /* Rounded corners for the entry box */
     padding: 15px; /* Space around content */
     margin-bottom: 20px; /* Space between entries */
     box-shadow: 0 2px 5px rgba(0, 0, 0); /* Shadow for depth */
     overflow: auto; /* Ensure content flows properly if expanded */
 }
+
 
 
 
@@ -138,21 +119,73 @@ p {
         margin-bottom: 40px; /* Increase margin for better spacing */
     }
 }
+.main-content {
+    flex-grow: 1;
+    position: relative;
+    padding: 20px;
+  
+    
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position-y: -2vh;
+    margin-left: 20px;
+    width: 75%;   /* Covers 80% of the parent container (often the full body width minus the sidebar) */
+    height: 200vh; /* Full viewport height */
+  }
+
+  .main-content-poem {
+    flex-grow: 1;
+    position: relative;
+    padding: 20px;
+  
+    
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position-y: -8vh;
+    margin-left: 20px;
+    width: 200%;
+    height: 200vh; /* Full viewport height */
+  }
+
+  .layout-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: stretch;
+    /*height: auto; /* Adjust based on header height */
+}
 
 
 .sidebar {
-    /*background-color: pink;*/
-    width: 200px;
-    padding: 20px;
+    /* background-color: pink; */
+    display: flex;
+    position: relative;
+    background-image: url('guestCheck.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 0;
+    width: 18vw;
     height: 100vh;
-    box-sizing: border-box;
+    padding: 20px;
+    align-self: stretch;
+    flex-direction: column; /* Stack buttons vertically */
+    justify-content: flex-start; /* or space-between/center/bottom */
+    align-items: center; /* horizontally center the buttons */
+      
+    /* box-sizing: border-box; */
+    min-height: 100%;
   }
+  
+
 
   .sidebar nav p {
-    margin: 15px 0;
+    padding-top: 15%;
+    margin: 0px;
   }
 
   .sidebar nav a img {
+    margin: 22px auto;
     display: block;
     border: none;
     outline: none;
@@ -161,22 +194,56 @@ p {
   .sidebar nav a {
     outline: none;
     border: none;
+    display: block;
+    width: 90%;          /* ← consistent relative to sidebar width */
+    margin: 10px auto;   /* ← centers the button horizontally */
+    text-align: center;
   }
 
-  .main-content {
-    background-image: url('paper.png');
-    background-repeat: no-repeat;
-    margin-left: 40px;
-    width: 100%;   /* Covers 80% of the parent container (often the full body width minus the sidebar) */
-    height: 200vh; /* Full viewport height */
+  .sidebar-deco {
+    position: relative;
+    width: 20vw;
+    top: 90vh;
   }
 
-  .layout-container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: calc(100vh - 150px); /* Adjust based on header height */
-}
+
+ 
+  .btn {
+    position: absolute;
+    display: block;
+    height: 3vw * .5;
+    text-align: center;
+  }
+
+  .btn img {
+    height: 3vw;
+  }
+  
+  .btn-home {
+    top: 7vw;
+    left: 0vw;
+  }
+  
+  .btn-blog {
+    top: 11vw;  /* instead of 190px */
+    left: 3vw;
+  }
+  
+  .btn-photos {
+    top: 16vw;
+    left: 1vw;
+  }
+  
+  .btn-poems {
+    top: 20vw;
+    left: 2vw;
+  }
+  
+  .btn-otherStuff {
+    top: 25vw;
+    left: 1vw;
+  }
+
 
 a img {
     border: 0;
@@ -201,3 +268,140 @@ a:active {
   border: none;
 }
   
+
+
+.rotate-on-hover {
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .rotate-on-hover:hover {
+    transform: rotate(10deg);
+  }
+
+  .rotate-on-hover-teddy {
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .rotate-on-hover-teddy:hover {
+    transform: rotate(2deg);
+  }
+
+
+
+
+  .rotate-on-hover1 {
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .rotate-on-hover1:hover {
+    transform: scale(1.1);
+  }
+
+  .rotate-on-hover2 {
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .rotate-on-hover2:hover {
+    transform: scale(1.1);
+  }
+
+.decor {
+    position:relative;
+    top: -1%;
+    left: 65%;
+    width: 30%;
+}
+
+
+
+.photo-gallery {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 30px;
+  }
+
+  .photo-grid img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .photo-navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+  }
+
+  .photo-navigation button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: 'Courier New', monospace;
+    background-color: #ddd;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .photo-navigation button:hover {
+    background-color: #ccc;
+  }
+
+
+.home-body {
+    font-size: 1.2vw;
+    
+    position: relative;
+    transform: rotate(-0.8deg);
+    left: -3.7vw;
+    top: 3.0vh;
+    width: 52vw;
+    margin: auto;
+
+    line-height: 3.46vh;
+    
+}
+ 
+.home-decor {
+    position:relative;
+    width: 23vw;
+    top: 0vh;
+    left: 35vw;
+}
+
+.home-decor-me {
+    position:relative;
+    width: 17vw;
+    top: 0vh;
+    left: -20vw;
+    transform: rotate(-2deg);
+}
+.home-decor-me1 {
+    position:relative;
+    width: 40vw;
+    top: -25vh;
+    left: 12vw;
+    transform: rotate(-2deg);
+}
+
+.home-decor-teddy {
+    position:relative;
+    width: 25vw;
+    top: -110vh;
+    left: 18vw;
+    transform: rotate(-20deg);
+}

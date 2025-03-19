@@ -1,49 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery</title>
+  <link rel="stylesheet" href="style.css">
 
-    <meta charset="utf-8" />
-
-    
-
-  </head>
+</head>
+<body>
   <header class="blog-header">
-
-    <img src="text.gif" alt="title" width = 400>
-    <nav>
-  
-      <p><a href="index.html">
-        <img src="home.gif" alt="home" height="39">
-        </a></p>
-  
-      <p><a href="blog.html">
-        <img src="blog.gif" alt="blog" height="45">
-        </a></p>
-      
-        <p><a href="pics.html">
-          <img src="pics.gif" alt="pics" height="45">
-          </a></p>
-    </nav>
+    <img src="text.gif" alt="title" width="400">
+    <img src="tamagotchiME.png" class="header-corner-img rotate-on-hover" alt="corner sticker">
   </header>
-  <body>
-    <nav>
-  
-      <p><a href="filmGallery.html">
-        <img src="text.gif" alt="home" height="39">
-        </a></p>
-  
-      <p><a href="blog.html">
-        <img src="blog.gif" alt="blog" height="45">
-        </a></p>
-      
-        <p><a href="pics.html">
-          <img src="pics.gif" alt="pics" height="45">
-          </a></p>
-    </nav>
-    
-    
-    
 
-  </body>
+  <div class="layout-container">
+    <div class="sidebar">
+      <nav>
+        <a href="index.html" class="btn btn-home">
+
+          <img src="blog_icons/homeButton.png" alt="home" class="rotate-on-hover1">
+        </a>
+        <a href="blog.html" class="btn btn-blog">
+          <img src="blog_icons/blogButton.png"alt="blog" class="rotate-on-hover2">
+        </a>
+        <a href="pics.html" class="btn btn-photos">
+          <img src="blog_icons/photosButton.png" alt="photos" class="rotate-on-hover1">
+        </a>
+
+        <a href="poems.html" class="btn btn-poems">
+          <img src="blog_icons/poemsButton.png"alt="poems" class="rotate-on-hover2">
+        </a>
+        <a href="otherStuff.html" class="btn btn-otherStuff">
+          <img src="blog_icons/otherStuffButton.png" alt="otherStuff" class="rotate-on-hover1">
+        </a>
+
+      </nav>
+    </div>
+
+    <div class="photo-gallery">
+      <div class="photo-grid">
+        <img src="images/aliceBowen.jpg" alt="Photo 3">
+        <img src="images/selfie1.jpeg" alt="Photo 1">
+        <img src="meow-meoooooww/images/IMG_6845.jpeg" alt="Photo 2">
+        <img src="images/rowanSwag.jpg" alt="Photo 4">
+        <img src="images/waterfall.jpg" alt="Photo 5">
+        <img src="images/feet.jpg" alt="Photo 6">
+      </div>
+
+      <div class="photo-navigation">
+        <button onclick="previousPhotos()">Previous</button>
+        <button onclick="nextPhotos()">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Define photo sets (arrays of image paths and alt texts)
+    const photoSets = [
+      // [
+      //   { src: "images/aliceBowen.jpg", alt: "Photo 1" },
+      //   { src: "images/selfie1.jpeg", alt: "Photo 2" },
+      //   { src: "meow-meoooooww/images/IMG_6845.jpeg", alt: "Photo 3" },
+      //   { src: "images/rowanSwag.jpg", alt: "Photo 4" },
+      //   { src: "images/waterfall.jpg", alt: "Photo 5" },
+      //   { src: "images/feet.jpg", alt: "Photo 6" },
+      // ],
+      [
+      { src: "images/pics-page/film-alice.JPG"},
+        { src: "images/pics-page/film-bike.JPG"},
+        { src: "images/pics-page/film-me.JPG"},
+        { src: "images/pics-page/film-rowan.JPG"},
+        { src: "images/pics-page/film-water.JPG"},
+        { src: "images/pics-page/film-aliceZia.JPG"},
+      ],
+      [
+      { src: "images/pics-page/idaho/idaho1.JPG"},
+        { src: "images/pics-page/idaho/idaho2.JPG"},
+        { src: "images/pics-page/idaho/idaho3.JPG"},
+        { src: "images/pics-page/idaho/idaho4.JPG"},
+        { src: "images/pics-page/idaho/idaho5.JPG"},
+        { src: "images/pics-page/idaho/idaho6.JPG"},
+      ],
+      [
+      { src: "images/pics-page/idaho/idaho7.JPG"},
+        { src: "images/pics-page/idaho/idaho8.JPG"},
+        { src: "images/pics-page/idaho/idaho9.JPG"},
+        { src: "images/pics-page/idaho/idaho10.JPG"},
+        { src: "images/pics-page/idaho/idaho11.JPG"},
+        { src: "images/pics-page/idaho/idaho12.JPG"},
+      ],
+      [
+      { src: "images/pics-page/idaho/idaho13.JPG"},
+        { src: "images/pics-page/idaho/idaho14.JPG"},
+        { src: "images/pics-page/idaho/idaho15.JPG"},
+        { src: "images/pics-page/idaho/idaho18.JPG"},
+        { src: "images/pics-page/idaho/idaho16.JPG"},
+        { src: "images/pics-page/idaho/idaho17.JPG"},
+      ],
+      [
+      { src: "images/pics-page/b&w/b&w-1.JPG"},
+        { src: "images/pics-page/b&w/b&w-2.JPG"},
+        { src: "images/pics-page/b&w/b&w-3.JPG"},
+        { src: "images/pics-page/b&w/b&w-4.JPG"},
+        { src: "images/pics-page/b&w/b&w-5.JPG"},
+        { src: "images/pics-page/b&w/b&w-6.JPG"},
+      ],
+      [
+      { src: "images/pics-page/b&w/b&w-7.JPG"},
+        { src: "images/pics-page/b&w/b&w-8.JPG"},
+        { src: "images/pics-page/b&w/b&w-9.JPG"},
+        { src: "images/pics-page/b&w/b&w-10.JPG"},
+        { src: "images/pics-page/b&w/b&w-11.JPG"},
+        { src: "images/pics-page/b&w/b&w-12.JPG"},
+      ],
+      [
+      { src: "images/pics-page/b&w/b&w-13.JPG"},
+        { src: "images/pics-page/b&w/b&w-14.JPG"},
+        { src: "images/pics-page/b&w/b&w-15.JPG"},
+        { src: "images/pics-page/b&w/b&w-16.JPG"},
+        { src: "images/pics-page/b&w/b&w-17.JPG"},
+        { src: "images/pics-page/b&w/b&w-18.JPG"},
+      ],
+      [
+      { src: "images/pics-page/b&w/b&w-19.JPG"},
+        { src: "images/pics-page/b&w/b&w-20.JPG"},
+        { src: "images/pics-page/b&w/b&w-21.JPG"},
+        { src: "images/pics-page/b&w/b&w-22.JPG"},
+        { src: "images/pics-page/b&w/b&w-23.JPG"},
+        { src: "images/pics-page/b&w/b&w-24.JPG"},
+      ],
+      [
+      { src: "images/pics-page/b&w/b&w-25.JPG"},
+        { src: "images/pics-page/b&w/b&w-26.JPG"},
+        { src: "images/pics-page/b&w/b&w-27.JPG"}
+      ]
+    ];
+  
+    let currentSetIndex = 0;
+  
+    function showPhotos() {
+      const gallery = document.querySelector(".photo-grid");
+      gallery.innerHTML = ""; // Clear current photos
+  
+      photoSets[currentSetIndex].forEach(photo => {
+        const img = document.createElement("img");
+        img.src = photo.src;
+        img.alt = photo.alt;
+        gallery.appendChild(img);
+      });
+    }
+  
+    function previousPhotos() {
+      currentSetIndex = (currentSetIndex - 1 + photoSets.length) % photoSets.length;
+      showPhotos();
+    }
+  
+    function nextPhotos() {
+      currentSetIndex = (currentSetIndex + 1) % photoSets.length;
+      showPhotos();
+    }
+  
+    // Initial display
+    showPhotos();
+  </script>
+  
+</body>
 </html>
