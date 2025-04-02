@@ -44,13 +44,15 @@ h3 {
 
 
 .blog-header {
-    padding: 30px;
+    padding: 3vh;
     position: relative;
 }
+
   
   .header-corner-img {
     position: absolute;
-    bottom: -9vh;
+    top: 1vh;
+    
     right: 0;
     width: 15vw;   /* or whatever small size you want */
     height: auto;
@@ -119,19 +121,7 @@ p {
         margin-bottom: 40px; /* Increase margin for better spacing */
     }
 }
-.main-content {
-    flex-grow: 1;
-    position: relative;
-    padding: 20px;
-  
-    
-    background-repeat: no-repeat;
-    background-size: 80%;
-    background-position-y: -2vh;
-    margin-left: 20px;
-    width: 75%;   /* Covers 80% of the parent container (often the full body width minus the sidebar) */
-    height: 200vh; /* Full viewport height */
-  }
+
 
   .main-content-poem {
     flex-grow: 1;
@@ -361,48 +351,49 @@ a:active {
     background-color: #ccc;
   }
 
+  .main-content {
+    flex-grow: 1;
+    position: absolute;
+    padding: 20px;
+  
+    
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position-y: 0vh;
+    /* background-position-x: 20vw; */
+    margin-left: 20vw;
+    width: 75%;   /* Covers 80% of the parent container (often the full body width minus the sidebar) */
+    height: 200vh; /* Full viewport height */
+  }
+
 
 .home-body {
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     
-    position: relative;
+    position: absolute;
     transform: rotate(-0.8deg);
-    left: -3.7vw;
-    top: 2.0vw;
-    width: 50vw;
+    left: 10vw;
+    top: 4.0vw;
+    width: 48vw;
     margin: auto;
 
     /* line-height: 3.46vh; */
-    line-height: 2vw;
+    line-height: 1.82vw;
     
 }
- 
-.home-decor {
-    position:relative;
-    width: 23vw;
-    top: 0vh;
-    left: 35vw;
-}
 
-.home-decor-me {
-    position:relative;
-    width: 17vw;
-    top: 0vh;
-    left: -20vw;
-    transform: rotate(-2deg);
+.home-images {
+  position:absolute;
+    width: 55vw;
+    top: 35vw;
+    left: 4vw;
 }
-.home-decor-me1 {
-    position:relative;
-    width: 40vw;
-    top: -25vh;
-    left: 12vw;
-    transform: rotate(-2deg);
-}
+ 
 
 .home-decor-teddy {
-    position:relative;
+    position:absolute;
     width: 25vw;
-    top: -110vh;
-    left: 18vw;
+    top: 5vh;
+    left: 57vw;
     transform: rotate(-20deg);
 }
