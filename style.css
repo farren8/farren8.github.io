@@ -397,3 +397,79 @@ a:active {
     left: 57vw;
     transform: rotate(-20deg);
 }
+
+.gify-pet {
+  position:absolute;
+  top: 43vh;
+  left: 5vw;
+  max-width: 100%; 
+  width: 350px; 
+  margin: auto;
+}
+
+.melon-text {
+  position:absolute;
+  top: 80vh;
+  left: 34.5vw;
+  width: 19vw;
+  transform: rotate(8.5deg);
+}
+
+.blogosphere {
+  position:absolute;
+  top: 19vh;
+  left: 34.5vw;
+  width: 25vw;
+}
+
+.flower1 {
+  position:absolute;
+  top: 5vh;
+  left: 0vw;
+  width: 6vw;
+  transition: transform 0.4s ease-in-out;
+}
+.flower2 {
+  position:absolute;
+  top: 18vh;
+  left: 0vw;
+  width: 6vw;
+  transition: transform 0.4s ease-in-out;
+}
+.flower3 {
+  position:absolute;
+  top: 31vh;
+  left: 0vw;
+  width: 6vw;
+  transition: transform 0.4s ease-in-out;
+}
+.rowan {
+  position:absolute;
+  top: 9vh;
+  left: 8vw;
+}
+.jolene {
+  position:absolute;
+  top: 22vh;
+  left: 8vw;
+}
+.taryn {
+  position:absolute;
+  top: 35vh;
+  left: 8vw;
+}
+
+.secret {
+  position:absolute;
+  top: 118vh;
+  left: 22vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.secretButton {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: transparent;
+}
+
